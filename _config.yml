@@ -1,0 +1,45 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: A bit-by-bit guide to the equations governing differentiable neural computers
+email: japerez@ua.es
+description: > # this means to ignore newlines until "baseurl:"
+  This guide attempts to gradually present the various pieces involved in the mathematical 
+  formulation of the differentiable neural computer (DNC) model, a memory-augmented neural 
+  network first introduced in the paper by Alex Graves, Greg Wayne et al., researchers at
+  DeepMind, published in the Nature journal in October 2016.
+baseurl: ""
+url: "http://localhost:4000"
+twitter_username: japer3z
+github_username:  jaspock
+
+# Build settings
+
+# markdown: kramdown
+# theme: minima
+# gems:
+#  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+  sass_dir: _sass
+include: ['_pages']
+
+markdown: kramdown
+kramdown:
+  input: GFM
+

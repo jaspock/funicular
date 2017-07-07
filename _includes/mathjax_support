@@ -1,0 +1,32 @@
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "all"
+      },
+      Macros: {
+        co: ['{\\definecolor{mycolor}{RGB}{6,126,142} \\color{mycolor}{#1}}', 1],
+        clock: ['{\\definecolor{mycolor}{RGB}{140,140,140} \\color{mycolor}{\\text{⏳}}} \\qquad', 0] 
+      },
+      extensions: ["color.js"]
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": {
+      scale: 100
+    }
+  });
+</script>
+
+<!--
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+-->
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>

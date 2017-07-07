@@ -1,0 +1,224 @@
+body {
+	font-size: 100%;
+	line-height: 1.6875;
+	margin: 0;
+	color: $font-color;
+	font-family: $font-style;
+	background-color: $back-color;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 600;
+	color: $heading-font-color;
+	font-family: $heading-font;
+	line-height: 1.6875;
+}
+
+h1 {
+	color: $main;
+}
+
+p {
+  margin-bottom: 1.6em;
+  text-align: justify;
+}
+
+main {
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+@media print {
+  body {-webkit-print-color-adjust: exact;}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+	body {
+		font-size: 94%;
+	}
+	p {
+		text-align: left;
+	}
+	main {
+		padding: 0 10px;
+    width: 95%;
+	}
+}
+
+@media only screen and (min-width: 500.01px) and (max-width: 800px) {
+	body {
+		font-size: 100%;
+	}
+	main {
+		width: 90%;
+	}
+}
+
+@media only screen and (min-width: 800.01px) and (max-width: 1100px) {
+	body {
+		font-size: 110%;
+  }
+	main {
+		width: 85%;
+		max-width: 720px;
+	}
+}
+
+@media only screen and (min-width: 1100.01px) {
+	body {
+		font-size: 120%;
+  }
+	main {
+		width: 75%;
+		max-width: 820px;
+	}
+}
+
+time {
+	color: #898989;
+}
+
+a,
+a:visited {
+	color: $link-color;
+	text-decoration: underline;
+	font-weight: normal;;
+}
+
+a:hover {
+	color: $link-hover-color;
+	text-decoration: none;
+}
+
+header {
+	background: $header;
+	padding: 0px 15px;
+	text-align: center;
+	margin: 50px 0 0;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+table {
+    color: #333;
+    border-collapse: collapse;
+		border-spacing: 0;
+		margin: auto;
+}
+
+td, th {
+	  border: 1px solid #CCC;
+	  padding: 10px;
+	  text-align: center;
+}
+
+th {
+    background: #F3F3F3;
+}
+
+td {
+    background: #FAFAFA;
+}
+
+footer {
+	text-align: center;
+	padding: 40px;
+}
+
+.disg {
+	border: 1px solid #aaaaaa;
+	margin-top: 30px;
+	margin-bottom: 25px;
+}
+
+.disg h4 {
+	margin: 0;
+	padding: 4px 4px 4px 10px;
+	background: #e2e2e2;
+	border-bottom: 1px solid #aaaaaa;
+}
+
+.disg > p {
+	margin: 10px;
+}
+
+.disg .MathJax_Display {
+	padding-right: 10px;
+}
+
+.author {
+	display: block;
+	border-top: 1px solid #979797;
+	border-bottom: 1px solid #979797;
+	text-align: center;
+	color: #818181;
+	margin: 15px 0 25px;
+	padding: 20px 0 20px;
+}
+
+.term {
+	background-color: #eaeaf4;
+	font-style: normal;
+}
+
+.label {
+	display: inline;
+	padding: .2em .6em .3em;
+	font-size: 70%;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .25em;
+	font-family: Helvetica,Arial,sans-serif;
+	text-decoration: none;
+}
+
+a.label:hover {
+	color: #fff;
+}
+
+a.label:visited {
+	color: #fff;
+}
+
+.label-blue1 {
+	background-color: #337ab7;
+}
+.label-blue2 {
+	background-color: #4694ab;
+}
+.label-blue3 {
+	background-color: #777799;
+}
+
+.dual::before {
+	color: #666;
+	content: "☯";
+}
+
+#index p {
+	display: block;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.interface::before {
+	color: #666;
+	content: "⛢";
+}

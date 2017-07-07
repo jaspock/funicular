@@ -1,0 +1,22 @@
+$content-width-large-desktop: 850px;
+$content-width-desktop: 700px;
+$content-width-tablet: 94%;
+$content-width-mobile: 92%;
+$main: #222;
+$back-color: #fdfdfd;
+$font-style: 'Mate', serif;
+$font-color: #111;
+$link-color: #067e8e;
+$link-hover-color: #aaa;
+$heading-font: 'Source Serif Pro', serif;
+$heading-font-color: #222;
+$light: #E7EDF4;
+$header:  #1D1425;
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

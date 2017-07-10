@@ -2,6 +2,7 @@
 title: A guide to neural computers
 author: Juan
 layout: default
+comments: true
 use_math: true
 ---
 

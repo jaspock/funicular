@@ -11,7 +11,7 @@ Written by **Juan Antonio**, researcher at Universidad de.
 
 **Last update:** {{ 'now' | date: "%B %d %Y" }}.
 
-**How to cite this work:** Juan, "{{page.title}}". First published on July 15 2017. Last modified  on {{ 'now' | date: "%B %d %Y" }}. {{site.url}}, accessed on {{ 'now' | date: "%B %d %Y" }} [replace access date with the actual one; [bibtex]({{ site.url }}/assets/bitbybitdnc.bib) file]
+**How to cite this work:** Juan, "{{page.title}}". First published on July 15 2017. Last modified  on {{ 'now' | date: "%B %d %Y" }}. {{site.url}}, accessed on {{ 'now' | date: "%B %d %Y" }} [replace access date with the actual one; [bibtex]({{ "/assets/bitbybitdnc.bib" | prepend: site.baseurl }}) file]
 
 **Comments and suggestions:** feel free to send any comments or suggestions to enhance this guide through [this page](http://github.com); you need a Github account to write a comment, but you can read other's comments without it.
 
@@ -73,5 +73,3 @@ $$
 \co{1.2}
 \end{bmatrix}
 $$
-
-

@@ -17,6 +17,8 @@
     {% include mathjax_support %}
   {% endif %}
 
-  {% include analytics.html %}
+	{% unless jekyll.environment == 'development' %}
+	    {% include analytics.html %}
+	{% endunless %}
 
 </head>

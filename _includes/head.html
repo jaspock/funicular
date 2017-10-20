@@ -5,13 +5,13 @@
 
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-	<link rel="stylesheet" href="{{ "/funicular/css/main.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <link href="https://fonts.googleapis.com/css?family=Mate" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
 
-  <link rel="shortcut icon" type="image/x-icon" href="{{ "/assets/favicon.ico" | prepend: site.baseurl }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ "assets/favicon.ico" | prepend: site.baseurl }}">
 
   {% if page.use_math %}
     {% include mathjax_support %}

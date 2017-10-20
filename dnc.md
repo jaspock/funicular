@@ -154,7 +154,7 @@ $$
 \end{bmatrix}
 $$
 
-where $\top$ denotes the transpose of a matrix. The vector representing the location to be read at time $t$ is called the <span class="term" markdown="1">read weighting</span> for reasons that will become clear later, and is represented as $\b{w}^\r{r}_t$ (in the running example, $\b{w}^\r{r}_t = [0;1;0;0]$). A position in memory can, therefore, be read with the operation $\b{M}^\top_t \b{w}^\r{r}_t$. There is a companion notebook that allows you to check how [these values]({{ "/dnc-notebook.html#Example-of-a-dualistic-read-operation" | prepend: site.baseurl }}) are obtained and apply the formulae to your own inputs.
+where $\top$ denotes the transpose of a matrix. The vector representing the location to be read at time $t$ is called the <span class="term" markdown="1">read weighting</span> for reasons that will become clear later, and is represented as $\b{w}^\r{r}_t$ (in the running example, $\b{w}^\r{r}_t = [0;1;0;0]$). A position in memory can, therefore, be read with the operation $\b{M}^\top_t \b{w}^\r{r}_t$. There is a companion notebook that allows you to check how [these values]({{ "/funicular/dnc-notebook.html#Example-of-a-dualistic-read-operation" | prepend: site.url }}) are obtained and apply the formulae to your own inputs.
 
 <div class="disg" markdown="1">
 #### Column vectors
@@ -1004,7 +1004,7 @@ in which $\gamma$ is again the value that satisfies $ \b{\phi}_t[\gamma] = j$. F
 
 Note that for those locations with full occupation (i.e., $\b{u}_t[\b{\phi}_t[j]] \approx 1$), the subtraction is approximately $0$ and it is, therefore, $\b{a}_t[\b{\phi}_t[j]]$. Note also that if at least one usage value of $0$ exists, then the first location in the list $\b{\phi}_t$ will be assigned a one in the allocation weighting and the remaining locations will be assigned a zero. No proof that the resulting allocation vector always belongs to $\Delta_N$ will be provided here.
 
-A further example. Note that the companion notebook allows you to check [how these tables are obtained]({{ "/dnc-notebook.html#Computation-of-the-allocation-weighting-vector" | prepend: site.baseurl }}) and get a table with your own data. In the case of the usage vector $\b{u}_t=[0.4;0.6;0.2;0.5]$, the resulting allocation weighting is $\b{a}_t=[0.12;0.016;0.8;0.04]$:
+A further example. Note that the companion notebook allows you to check [how these tables are obtained]({{ "/dnc-notebook.html#Computation-of-the-allocation-weighting-vector" | prepend: site.baseurl }})  and get a table with your own data. In the case of the usage vector $\b{u}_t=[0.4;0.6;0.2;0.5]$, the resulting allocation weighting is $\b{a}_t=[0.12;0.016;0.8;0.04]$:
 
 | $j$ | $\b{u}_t[j]$ | $\gamma : \b{\phi}_t[\gamma] = j$ | $1-\b{u}_t[j]$ | $\prod_{i=1}^{\gamma-1} \b{u}_t[\b{\phi}_t[i]]$ | $\b{a}_t[j]$ |
 |---|---|---|---|---|---|
@@ -1048,11 +1048,11 @@ $$
 
 Memory-augmented neural networks, such as DNCs, lead to interesting challenges in the interplay of machine learning, reasoning and algorithm inference. The purpose of this guide is not to point out these opportunities, but to simply present the motivations behind the equations that define how DNCs work in an pedagogical manner. I certainly hope that the objective has been achieved. Finally, it is interesting to note that many of these equations admit alternative formulations, which may pave the way for further curiosity, reflection and research.
 
-<span id="cite">**How to cite this work:**</span> Juan Antonio Pérez-Ortiz, "{{page.title}}". First published on October 20 2017. Last modified on October 20 2017. {{site.url}}, accessed on {{ 'now' | date: "%B %d %Y" }} [a [bibtex]({{ "/assets/dnc.bib" | prepend: site.baseurl }}) file is also available]
+<span id="cite">**How to cite this work:**</span> Juan Antonio Pérez-Ortiz, "{{page.title}}". First published on October 20 2017. Last modified on October 20 2017. {{site.baseurl}}, accessed on {{ 'now' | date: "%B %d %Y" }} [a [bibtex]({{ "/assets/dnc.bib" | prepend: site.baseurl }}) file is also available]
 
 <span id="about">**About the author:**</span> I work as an associate professor and researcher at [Universidad de Alicante](https://www.ua.es/) in Spain. I received my Ph.D. in computer science in 2002 with a thesis on recurrent neural models for sequence processing that used, among others, [distributional](http://www.dlsi.ua.es/~japerez/pub/pdf/ijcnn2001.pdf) [representations](https://doi.org/10.1109/IJCNN.2001.938396) for natural language processing (as devised by my thesis supervisor, [Mikel L. Forcada](http://www.dlsi.ua.es/~mlf/)) and [LSTM](ftp://ftp.idsia.ch/pub/juergen/nnlstmkalman.pdf) [cells](https://doi.org/10.1016/S0893-6080(02)00219-8) (as devised by [Jürgen Schmidhuber](http://people.idsia.ch/~juergen/), who was my supervisor during my internship at the [IDSIA](http://www.idsia.ch/) research institute in 2000). I have also worked on machine translation and computer-assisted translation, especially as a member of the team involved in the development of the open-source machine translation platform [Apertium](http://www.apertium.org). I have recently started to research on the topic of neural machine translation. I currently teach undergraduate and postgraduate courses on translation technologies, programming and web development. A list of my publications is available at [my profile](https://scholar.google.com/citations?hl=en&user=_NEbOj4AAAAJ) at Google Scholar.
 
-<span id="sources">**Sources:**</span> the source files of this document are available in a Github [repository](http://github.com).
+<span id="sources">**Sources:**</span> the source files of this document are available in a Github [repository](https://github.com/jaspock/funicular).
 
 <span id="license">**License:**</span> <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">«{{page.title}}»</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.dlsi.ua.es/~japerez/" property="cc:attributionName" rel="cc:attributionURL">Juan Antonio Pérez-Ortiz</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 

@@ -2,6 +2,7 @@
 title: A bit-by-bit guide to the equations governing differentiable neural computers
 author: Juan Antonio Pérez-Ortiz
 layout: default
+redirect_from: "/index.html"
 use_math: true
 ---
 

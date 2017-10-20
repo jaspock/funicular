@@ -153,7 +153,7 @@ $$
 \end{bmatrix}
 $$
 
-where $\top$ denotes the transpose of a matrix. The vector representing the location to be read at time $t$ is called the <span class="term" markdown="1">read weighting</span> for reasons that will become clear later, and is represented as $\b{w}^\r{r}_t$ (in the running example, $\b{w}^\r{r}_t = [0;1;0;0]$). A position in memory can, therefore, be read with the operation $\b{M}^\top_t \b{w}^\r{r}_t$. There is a companion notebook that allows you to check how [these values](dnc-notebook.html#Example-of-a-dualistic-read-operation) are obtained and apply the formulae to your own inputs.
+where $\top$ denotes the transpose of a matrix. The vector representing the location to be read at time $t$ is called the <span class="term" markdown="1">read weighting</span> for reasons that will become clear later, and is represented as $\b{w}^\r{r}_t$ (in the running example, $\b{w}^\r{r}_t = [0;1;0;0]$). A position in memory can, therefore, be read with the operation $\b{M}^\top_t \b{w}^\r{r}_t$. There is a companion notebook that allows you to check how [these values](funicular/dnc-notebook.html#Example-of-a-dualistic-read-operation) are obtained and apply the formulae to your own inputs.
 
 <div class="disg" markdown="1">
 #### Column vectors
@@ -197,7 +197,7 @@ $$
 \end{bmatrix}
 $$
 
-Note that the resulting vector is still *close* to the content of the second memory location, but that the residual attention paid to the third and fourth locations prevents it from exactly matching the second location. The companion notebook allows you to check how [these values](dnc-notebook.html#Example-of-a-non-dualistic-read-operation) are obtained. More specifically (as will be seen later), the operations performed by the read head produce weightings $\b{w}^\r{r}_t \in \Delta_N$, with $\Delta_N$ defined as:
+Note that the resulting vector is still *close* to the content of the second memory location, but that the residual attention paid to the third and fourth locations prevents it from exactly matching the second location. The companion notebook allows you to check how [these values](funicular/dnc-notebook.html#Example-of-a-non-dualistic-read-operation) are obtained. More specifically (as will be seen later), the operations performed by the read head produce weightings $\b{w}^\r{r}_t \in \Delta_N$, with $\Delta_N$ defined as:
 
 $$
 \Delta_N = \left\{ \b{\alpha} \in \R^N, \alpha[i] \in [0,1], \sum_{i=1}^N \alpha[i] \leq 1 \right\}
@@ -371,7 +371,7 @@ $$
 \end{eqnarray}
 $$
 
-The companion notebook allows you to check how [these values](dnc-notebook.html#Example-of-a-dualistic-write-operation) are obtained and apply the formulae to your own inputs. Note how the erasing and the updating have been wisely set out as a series of multiplications, additions and subtractions, all of which are differentiable. Obviously, $\b{v}_t \in \R^W$ like the other vectors stored in the memory. <span class="dual"></span> Although $\b{e}_t$ is a vector in $[0,1]^W$, we would expect it to always be a vector of ones, that is $\b{e}_t = \b{1}$, as it seems reasonable to completely erase the $W$ elements from a memory location before updating it. Again, this would be the case in a dualistic binary world, but it does not apply to actual DNCs for which a number of elements in the memory vector may be partially erased or not even erased at all. Add to this the fact that the write weighting could be focusing on different locations with different non-null degrees of attention and you will get a good idea of the pluralistic nature of DNCs. The learning algorithm will hopefully determine the best vectors for each time $t$ and they will consist of elements that are not as dualistic as in the running example.
+The companion notebook allows you to check how [these values](funicular/dnc-notebook.html#Example-of-a-dualistic-write-operation) are obtained and apply the formulae to your own inputs. Note how the erasing and the updating have been wisely set out as a series of multiplications, additions and subtractions, all of which are differentiable. Obviously, $\b{v}_t \in \R^W$ like the other vectors stored in the memory. <span class="dual"></span> Although $\b{e}_t$ is a vector in $[0,1]^W$, we would expect it to always be a vector of ones, that is $\b{e}_t = \b{1}$, as it seems reasonable to completely erase the $W$ elements from a memory location before updating it. Again, this would be the case in a dualistic binary world, but it does not apply to actual DNCs for which a number of elements in the memory vector may be partially erased or not even erased at all. Add to this the fact that the write weighting could be focusing on different locations with different non-null degrees of attention and you will get a good idea of the pluralistic nature of DNCs. The learning algorithm will hopefully determine the best vectors for each time $t$ and they will consist of elements that are not as dualistic as in the running example.
 
 Let us now consider the same memory matrix $\b{M}_t$ and vector to be written $\b{v}_t$, but let us change the write weighting and erase vector to non-dualistic alternatives:
 
@@ -482,7 +482,7 @@ $$
 \end{eqnarray}
 $$
 
-Once again, the companion notebook allows you to check how [these values](dnc-notebook.html#Example-of-a-non-dualistic-write-operation) are obtained. Equation \eqref{newm} is probably better understood if shown at the element level:
+Once again, the companion notebook allows you to check how [these values](funicular/dnc-notebook.html#Example-of-a-non-dualistic-write-operation) are obtained. Equation \eqref{newm} is probably better understood if shown at the element level:
 
 $$
 \b{M}[i,j] = \b{M}[i,j] \left( 1 - \b{w}^\r{w}_t[i] \b{e}_t[j] \right) + \b{w}^\r{w}_t[i] \b{v}_t[j]
@@ -567,7 +567,7 @@ $$
 \end{eqnarray}
 $$
 
-This is a [graphical representation of the three vectors](https://www.wolframalpha.com/input/?i=vector%7B0.3,0.5,1%7D,+vector%7B-0.5,0.01,3.1%7D,+vector%7B0.2,0.6,1.2%7D). It is now possible to calculate the values of $\c{C}$ for two different values of $\beta$, namely $\beta \in \\{1,10\\}$. The companion notebook allows you to check how [all these values](dnc-notebook.html#Content-based-addressing) are obtained.
+This is a [graphical representation of the three vectors](https://www.wolframalpha.com/input/?i=vector%7B0.3,0.5,1%7D,+vector%7B-0.5,0.01,3.1%7D,+vector%7B0.2,0.6,1.2%7D). It is now possible to calculate the values of $\c{C}$ for two different values of $\beta$, namely $\beta \in \\{1,10\\}$. The companion notebook allows you to check how [all these values](funicular/dnc-notebook.html#Content-based-addressing) are obtained.
 
 $$
 \begin{eqnarray}
@@ -1003,7 +1003,7 @@ in which $\gamma$ is again the value that satisfies $ \b{\phi}_t[\gamma] = j$. F
 
 Note that for those locations with full occupation (i.e., $\b{u}_t[\b{\phi}_t[j]] \approx 1$), the subtraction is approximately $0$ and it is, therefore, $\b{a}_t[\b{\phi}_t[j]]$. Note also that if at least one usage value of $0$ exists, then the first location in the list $\b{\phi}_t$ will be assigned a one in the allocation weighting and the remaining locations will be assigned a zero. No proof that the resulting allocation vector always belongs to $\Delta_N$ will be provided here.
 
-A further example. Note that the companion notebook allows you to check [how these tables are obtained](dnc-notebook.html#Computation-of-the-allocation-weighting-vector) and get a table with your own data. In the case of the usage vector $\b{u}_t=[0.4;0.6;0.2;0.5]$, the resulting allocation weighting is $\b{a}_t=[0.12;0.016;0.8;0.04]$:
+A further example. Note that the companion notebook allows you to check [how these tables are obtained](funicular/dnc-notebook.html#Computation-of-the-allocation-weighting-vector) and get a table with your own data. In the case of the usage vector $\b{u}_t=[0.4;0.6;0.2;0.5]$, the resulting allocation weighting is $\b{a}_t=[0.12;0.016;0.8;0.04]$:
 
 | $j$ | $\b{u}_t[j]$ | $\gamma : \b{\phi}_t[\gamma] = j$ | $1-\b{u}_t[j]$ | $\prod_{i=1}^{\gamma-1} \b{u}_t[\b{\phi}_t[i]]$ | $\b{a}_t[j]$ |
 |---|---|---|---|---|---|

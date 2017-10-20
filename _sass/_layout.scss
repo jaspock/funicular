@@ -40,7 +40,14 @@ main {
 }
 
 @media print {
-  body {-webkit-print-color-adjust: exact;}
+  body {-webkit-print-color-adjust: exact;
+	      font-size: 12pt;
+			  margin-left: 10mm;
+			  margin-right: 10mm;
+			}
+	.no-print {
+        display: none !important;
+	}
 }
 
 @media only screen and (min-width: 0px) and (max-width: 500px) {
@@ -135,6 +142,7 @@ td {
 
 footer {
 	text-align: center;
+	margin-top: 40px;
 	padding: 40px;
 }
 
@@ -176,6 +184,7 @@ footer {
 
 .label {
 	display: inline;
+	margin-right: 7px;
 	padding: .2em .6em .3em;
 	font-size: 70%;
 	font-weight: 700;
@@ -215,7 +224,7 @@ a.label:visited {
 #index p {
 	display: block;
 	text-align: left;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 
 .interface::before {

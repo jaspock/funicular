@@ -153,7 +153,7 @@ $$
 \end{bmatrix}
 $$
 
-where $\top$ denotes the transpose of a matrix. The vector representing the location to be read at time $t$ is called the <span class="term" markdown="1">read weighting</span> for reasons that will become clear later, and is represented as $\b{w}^\r{r}_t$ (in the running example, $\b{w}^\r{r}_t = [0;1;0;0]$). A position in memory can, therefore, be read with the operation $\b{M}^\top_t \b{w}^\r{r}_t$. There is a companion notebook that allows you to check how [these values](/dnc-notebook.html#Example-of-a-dualistic-read-operation) are obtained and apply the formulae to your own inputs.
+where $\top$ denotes the transpose of a matrix. The vector representing the location to be read at time $t$ is called the <span class="term" markdown="1">read weighting</span> for reasons that will become clear later, and is represented as $\b{w}^\r{r}_t$ (in the running example, $\b{w}^\r{r}_t = [0;1;0;0]$). A position in memory can, therefore, be read with the operation $\b{M}^\top_t \b{w}^\r{r}_t$. There is a companion notebook that allows you to check how [these values](/funicular/dnc-notebook.html#Example-of-a-dualistic-read-operation) are obtained and apply the formulae to your own inputs.
 
 <div class="disg" markdown="1">
 #### Column vectors
